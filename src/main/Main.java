@@ -23,4 +23,5 @@ public class Main extends Application {
         Main.mainStage = primaryStage;
         Main.mainStage.show();
     }
+
 }
