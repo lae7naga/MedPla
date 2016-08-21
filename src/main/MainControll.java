@@ -2,6 +2,8 @@ package main;
 
 
 import javafx.beans.binding.Bindings;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.MapChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,10 +41,11 @@ public class MainControll implements Initializable {
     @FXML MenuBar menuBar;
     @FXML MediaView mediaView;
     @FXML MenuItem menuitemAddFile;
-    @FXML Label lblJudul, lblDurasi, lblAlbum, lblArtist, lblYear, lblTotalTime, lblStatus;
+    @FXML Label lblJudul, lblDurasi, lblAlbum, lblArtist, lblYear, lblTotalTime, lblStatus, lblVolume;
     @FXML TextArea textareaInfoFile;
     @FXML Button btnPlay, btnStop;
     @FXML ListView listViewPlaylist;
+    @FXML Slider sliderVolume;
 
 
     @FXML void handleAddFile (ActionEvent actionEvent) throws MalformedURLException {
@@ -92,12 +95,8 @@ public class MainControll implements Initializable {
                         ButtonType.OK
                 );
             }
-            finally {
-                //mediaPlayer.dispose();
-            }
 
         }
-
     }
 
     @FXML void handlePlay (ActionEvent actionEvent) {
@@ -130,6 +129,7 @@ public class MainControll implements Initializable {
             } else {
                 onPlaying = true;
                 mediaView.setMediaPlayer(mediaPlayer);
+                mediaPlayer.setVolume(sliderVolume.getValue() / 100);
                 mediaView.getMediaPlayer().play();
             }
         } else {
@@ -241,6 +241,14 @@ public class MainControll implements Initializable {
             /*fm = new File(getClass().getRe);
             textareaInfoFile.setText("Cek: " + fm.exists());*/
             menuBar.prefWidthProperty().bind(Bindings.selectDouble(topScrollPane.sceneProperty(), "width"));
+            lblVolume.setText(40 + "");
+            sliderVolume.valueProperty().addListener(new ChangeListener<Number>() {
+                @Override
+                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                    mediaPlayer.setVolume((double)newValue / 100);
+                    lblVolume.setText(((int) Math.floor((Double) newValue)) + "");
+                }
+            });
         } catch (Exception e) {
             AlertInfo.showAlertErrorMessage(
                     "Informasi Aplikasi",
