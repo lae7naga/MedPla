@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="MedPla">
+    <output-path>$PROJECT_DIR$/out/artifacts/MedPla</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="main.Main" />
+        <option name="description" value="An MP3 Media Player for All Operting System" />
+        <option name="height" value="625" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="MedPla - An Audio Media Player" />
+        <option name="vendor" value="Hendro Pramana Sinaga" />
+        <option name="version" value="0.02 Build 22" />
+        <option name="width" value="622" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="MedPla.jar">
+        <element id="module-output" name="MedPla" />
+      </element>
+    </root>
+  </artifact>
+</component>

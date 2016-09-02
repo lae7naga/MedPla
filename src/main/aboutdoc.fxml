@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f9f9f9;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="263.0" layoutY="31.0" text="MedPla">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="63.0" text="(A Media Player for MP3 - Ver.0.2 build 22)" />
+      <Separator layoutX="76.0" layoutY="94.0" prefHeight="0.0" prefWidth="449.0" />
+      <Text layoutX="75.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MedPla adalah aplikasi pemutar audio yang dapat dijalankan di operasi sistem masa kini (Linux, Windows, Mac).&#10;Aplikasi ini dapat digunakan oleh siapa saja. Pengembangan aplikasi dilakukan bertahap. Anda dapat memberikan buah ide pikiran untuk pengembangan aplikasi ini untuk lebih baik kedepannya. Buah ide pikiran dapat dikirimkan ke : hendro.sinaga@hotmail.com. Dengan format:&#10;Subject: MedPla Idea&#10;Deskripsi: MedPla Idea&#10;Isi: Isi dari ide yang disampaikan&#10;&#10;Dengan segala kerendahan hati, pengembang mengucapkan terima kasih.&#10;&#10;Salam," textAlignment="JUSTIFY" wrappingWidth="449.0000009536743" />
+   </children>
+</AnchorPane>
